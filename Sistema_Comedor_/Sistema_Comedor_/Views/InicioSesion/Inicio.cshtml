@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <style>
+        h2 {
+            position: relative;
+            left: 460px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .Logo {
+            position: relative;
+            left: 430px;
+        }
+
+        .Login {
+            position: relative;
+            left: 400px;
+        }
+
+        .Registrarse {
+            position: relative;
+            left: 400px;
+        }
+    </style>
+    <div class="row">
+        <h2>Iniciar Sesion</h2>
+        <div class="Logo">
+            <div class="container">
+                <img src="~/Content/Img/Logo.png" width="190" />
+            </div>
+        </div>
+        <br />
+        <div class="container">
+            <div class="Login">
+                <form action="" method="post">
+                    Usuario: <input type="text" name="" required />
+                    <br />
+                    <br />
+                    Contraseña: <input type="password" name="" required />
+                    <br />
+                    <br />
+                    <button type="submit" name="" class="btn btn-success">Acceder</button>
+                </form>
+            </div>
+            <br />
+            <div class="Registrarse">
+                <a href="">No tienes una credencial...da click aqui</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    Derechos de autor: Emerson Humberto Carpaño Granados
+</div>
+

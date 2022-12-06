@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Registrarse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="Logo">
+    <div class="container">
+        <div class="row">
+            <style>
+                .Registro {
+                    position: relative;
+                    left: 400px;
+                    top: 80px;
+                }
+                h2{
+                    position:relative;
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+                .Salir{
+                    position:relative;
+                    left:800px;
+                    bottom:60px;
+                }
+            </style>
+            <h2>Registrarse</h2>
+            <br />
+            <div class="Salir">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+                        <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z" />
+                    </svg>Volver a la pagina principal</a>
+            </div>
+            <div class="Registro">
+                <form action="" method="post">
+                    <br />
+                    Usuario: <input type="text" name="" placeholder="Ingrese un nombre de usuario" />
+                    <br />
+                    <br />
+                    Contraseña: <input type="password" name="" placeholder="Ingrese una contraseña" />
+                    <br />
+                    <br />
+                    Confirmar Contraseña: <input type="password" name="" placeholder="Confirmar contraseña" />
+                    <br />
+                    <br />
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
