@@ -34,6 +34,7 @@ as begin
 	  Set @Mensaje = 'El usuario ya existe!!'
 	end
 end
+go
 
 Create Procedure sp_Validar(
 @Usuario Varchar(50),
@@ -45,3 +46,4 @@ As begin
   else
     select '0'
 end
+go
