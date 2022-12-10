@@ -36,11 +36,11 @@
         <br />
         <div class="container">
             <div class="Login">
-                <form action="" method="post">
-                    Usuario: <input type="text" name="" required />
+                <form action="@Url.Action("Inicio","InicioSesion")" method="post">
+                    Usuario: <input type="text" name="Usuario" required />
                     <br />
                     <br />
-                    Contraseña: <input type="password" name="" required />
+                    Contraseña: <input type="password" name="Contraseña" required />
                     <br />
                     <br />
                     <button type="submit" name="" class="btn btn-success">Acceder</button>
@@ -48,7 +48,7 @@
             </div>
             <br />
             <div class="Registrarse">
-                <a href="">No tienes una credencial...da click aqui</a>
+                <a href="@Url.Action("Registrarse","InicioSesion")">No tienes una credencial...da click aqui</a>
             </div>
         </div>
     </div>

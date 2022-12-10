@@ -32,15 +32,15 @@
                     </svg>Volver a la pagina principal</a>
             </div>
             <div class="Registro">
-                <form action="" method="post">
+                <form action="@Url.Action("Registrarse","InicioSesion")" method="post">
                     <br />
-                    Usuario: <input type="text" name="" placeholder="Ingrese un nombre de usuario" />
-                    <br />
-                    <br />
-                    Contraseña: <input type="password" name="" placeholder="Ingrese una contraseña" />
+                    Usuario: <input type="text" name="Usuario" placeholder="Ingrese un nombre de usuario" />
                     <br />
                     <br />
-                    Confirmar Contraseña: <input type="password" name="" placeholder="Confirmar contraseña" />
+                    Contraseña: <input type="password" name="Contraseña" placeholder="Ingrese una contraseña" />
+                    <br />
+                    <br />
+                    Confirmar Contraseña: <input type="password" name="Confirmar" placeholder="Confirmar contraseña" />
                     <br />
                     <br />
                     <button type="submit" class="btn btn-primary">Registrarse</button>

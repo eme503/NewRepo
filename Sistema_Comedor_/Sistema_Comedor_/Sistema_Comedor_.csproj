@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InicioSesionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -132,7 +133,20 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Img2\1605023246_293739_1605199483_media_normal.jpg" />
+    <Content Include="Content\Img2\cocinillas_162247460_116258364_1706x960.jpg" />
+    <Content Include="Content\Img2\HD-wallpaper-grilled-food-grilled-plate-food-chicken.jpg" />
+    <Content Include="Content\Img2\que-carne-escoger.jpg" />
+    <Content Include="Content\Img2\Receta-de-lasagna-peruana.jpg" />
+    <Content Include="Content\Img\5.jpg" />
+    <Content Include="Content\Img\chicken-steak-with-lemon-tomato-chili-and-carrot-on-white-plate-1-scaled.jpg" />
+    <Content Include="Content\Img\cocinillas_39256075_116186350_1024x576.jpg" />
+    <Content Include="Content\Img\desayuno-12.jpg" />
+    <Content Include="Content\Img\desayunos-en-torreon.jpg" />
     <Content Include="Content\Img\Logo.png" />
+    <Content Include="Content\Img\Mmm...huevos_rancheros.jpg" />
+    <Content Include="Content\Img\O43OCAL6ZFCC7OQWQD2HMRXBSI.jpeg" />
+    <Content Include="Content\Img\WAFFLES-DE-DESAYUNO.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -163,6 +177,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\InicioSesion\Inicio.cshtml" />
     <Content Include="Views\InicioSesion\Registrarse.cshtml" />
+    <Content Include="Views\Home\Principal.cshtml" />
+    <Content Include="Views\Home\Desayunos.cshtml" />
+    <Content Include="Views\Home\Almuerzos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -67,7 +67,7 @@ namespace Sistema_Comedor_.Controllers
             ViewData["Mensaje"] = mensaje;
             if (registrado)//Si el usuario esta registrado con exito nos envia a la siguiente pagina
             {
-                return RedirectToAction("", "");
+                return RedirectToAction("Inicio", "InicioSesion");
             }
             else
             {
@@ -78,7 +78,36 @@ namespace Sistema_Comedor_.Controllers
         [HttpPost]
         public ActionResult Inicio(ViewModelPersonal personal)
         {
-            return View();
+            //Encriptamos la contraseña
+            personal.Contraseña = ConvertirSha256(personal.Contraseña);
+            //Procedemos a realizar las operaciones por medio de un procedimiento almacenado
+            using(SqlConnection con = new SqlConnection(CC))
+            {
+                //Procedemos a crear un comando
+                SqlCommand cmd = new SqlCommand("sp_Validar",con);//Le pasamos el procedimiento
+                cmd.Parameters.AddWithValue("Usuario", personal.Usuario);//Campos a evaluar
+                cmd.Parameters.AddWithValue("Contraseña", personal.Contraseña);
+                cmd.CommandType = CommandType.StoredProcedure;//Especificamos el procedimiento
+                con.Open();//Abrimos la conexion
+
+                personal.Id = Convert.ToInt32(cmd.ExecuteScalar().ToString());//Vamos a convertir
+                //el id en entero y para mostrar el resultado final lo convertimos en cadena de texto
+
+                //Realizamos la validacion si el id del usuario existe nos envia al siguiente 
+                //web forms
+                if (personal.Id !=0) 
+                {
+                    Session["usuario"] = personal;
+                    return RedirectToAction("Principal","Home");//Nos lleva a la siguiente pagina
+                }
+                else
+                {
+                    //Muestra un mensaje
+                    ViewData["Mensaje"] = "El usuario no existe!!";
+                    return View();
+                }
+            }
+            
         }
         public static string ConvertirSha256(string texto)
         {
