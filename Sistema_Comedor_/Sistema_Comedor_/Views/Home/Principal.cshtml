@@ -17,6 +17,20 @@
     h2{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
+    .Desayuno{
+        position:relative;
+        right:350px;
+    }
+    .Almuerzo {
+        position: relative;
+        top: 10px;
+        right: 350px;
+    }
+    .Cena{
+        position:relative;
+        top:20px;
+        right:350px;
+    }
 </style>
 <h2>Menu Principal</h2>
 <div class="collapse" id="navbarToggleExternalContent">
@@ -24,11 +38,17 @@
         <h5 class="text-white h4">CATEGORIAS</h5>
         <span class="text-muted">Elija una categoria:</span>
         <br />
-        <ul>
-            <li><a href="@Url.Action("Desayunos","Home")">Desayunos Tipicos</a></li>
-            <li><a href="">Almuerzos</a></li>
-            <li><a href="">Cena</a></li>
-        </ul>
+        <div class="vstack gap-2 col-md-5 mx-auto">
+            <div class="Desayuno">
+                <button type="button" class="btn btn-secondary">Desayunos</button>
+            </div>
+            <div class="Almuerzo">
+                <button type="button" class="btn btn-success">Almuerzos</button>
+            </div>
+            <div class="Cena">
+                <button type="button" class="btn btn-primary">Cenas</button>
+            </div>
+        </div>
     </div>
 </div>
 <nav class="navbar navbar-dark bg-dark">

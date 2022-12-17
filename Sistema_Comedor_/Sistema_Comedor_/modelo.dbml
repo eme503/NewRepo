@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Sistema_Comedor" Class="modeloDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-GT757EA;Initial Catalog=Sistema_Comedor;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Sistema_ComedorConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Almuerzo" Member="Almuerzo">
+    <Type Name="Almuerzo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre_Plato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cena" Member="Cena">
+    <Type Name="Cena">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre_Plato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Desayunos" Member="Desayunos">
+    <Type Name="Desayunos">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre_Plato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Personal" Member="Personal">
+    <Type Name="Personal">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_AgregarDesayuno" Method="sp_AgregarDesayuno">
+    <Parameter Name="Nombre_Plato" Parameter="nombre_Plato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ActualizarDesayuno" Method="sp_ActualizarDesayuno">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre_Plato" Parameter="nombre_Plato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_EliminarDesayuno" Method="sp_EliminarDesayuno">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_AgregarAlumerzo" Method="sp_AgregarAlumerzo">
+    <Parameter Name="Nombre_Plato" Parameter="nombre_Plato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_EliminarAlmuerzo" Method="sp_EliminarAlmuerzo">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ActualizarAlmuerzo" Method="sp_ActualizarAlmuerzo">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre_Plato" Parameter="nombre_Plato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_AgregarCena" Method="sp_AgregarCena">
+    <Parameter Name="Nombre_Plato" Parameter="nombre_Plato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ActualizarCena" Method="sp_ActualizarCena">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre_Plato" Parameter="nombre_Plato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_EliminarCena" Method="sp_EliminarCena">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

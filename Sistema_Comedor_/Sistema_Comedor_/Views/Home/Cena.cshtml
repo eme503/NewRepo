@@ -2,7 +2,6 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <meta name="author" content="" />
-    <title>Almuerzo</title>
+    <title>Cenas</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -21,11 +20,6 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <style>
-        h2{
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-    </style>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
@@ -49,11 +43,13 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" onclick="document.location.href='@Url.Action("Ordenes_Realizadas_Almuerzo","Ordenes")'">
-                        Realizar pedido
-                    </button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" onclick="document.location.href='@Url.Action("Ordenes_Realizadas_Cena","Ordenes")'" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush" viewBox="0 0 16 16">
+                        <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04zM4.705 11.912a1.23 1.23 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.39 3.39 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3.122 3.122 0 0 0 .126-.75l-.793-.792zm1.44.026c.12-.04.277-.1.458-.183a5.068 5.068 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005a.031.031 0 0 1-.007.004zm3.582-3.043.002.001h-.002z" />
+                    </svg>
+                    Realizar pedido
+                </button>
                 </form>
             </div>
         </div>
@@ -62,8 +58,8 @@
     <header class="bg-dark py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Almuerzos</h1>
-                <p class="lead fw-normal text-white-50 mb-0">te mostramos los mejores almuerzos para volver a cargar las pilas</p>
+                <h1 class="display-4 fw-bolder">Cenas nocturnas</h1>
+                <p class="lead fw-normal text-white-50 mb-0">te mostramos las mejores cenas para terminar el dia de la mejor manera</p>
             </div>
         </div>
     </header>
@@ -74,17 +70,17 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="~/Content/Img2/Receta-de-lasagna-peruana.jpg" alt="..." />
+                        <img class="card-img-top" src="~/Content/Img3/cenasrapidas.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Lasaña de carne</h5>
+                                <h5 class="fw-bolder">Sandwich</h5>
                                 <!-- Product price-->
-                                $3.50
+                                $3.00
                                 <p>
-                                    Lasaña de carne contiene: Carne, queso, salsa , pasta cilantro
-                                    y un jugo natural al gusto del cliente
+                                    Sandwich con jamon de pavo , mayonesa , pepinesas, queso craft,
+                                    tomate , lechuga, jalapeños.
                                 </p>
                             </div>
                         </div>
@@ -94,17 +90,16 @@
                     <div class="card h-100">
                         <!-- Sale badge-->
                         <!-- Product image-->
-                        <img class="card-img-top" src="~/Content/Img2/que-carne-escoger.jpg" alt="..." />
+                        <img class="card-img-top" src="~/Content/Img3/ideas-para-cenar-quesadillas-de-pollo-scaled.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Carne asada</h5>
+                                <h5 class="fw-bolder">Rapiditas con queso</h5>
                                 <!-- Product price-->
                                 $5.00
                                 <p>
-                                    Carne asada , arroz , queso , chorizo , un jalapelo , tortillas,
-                                    y fresco o una cerveza
+                                    Tortillas fritas con queso craft y carne molina.
                                 </p>
                             </div>
                         </div>
@@ -113,18 +108,16 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="~/Content/Img2/1605023246_293739_1605199483_media_normal.jpg" alt="..." />
+                        <img class="card-img-top" src="~/Content/Img3/panimi.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Pollo guisado</h5>
-                                <!-- Product reviews-->
+                                <h5 class="fw-bolder">Panimi con jamon y queso</h5>
                                 <!-- Product price-->
                                 $5.00
                                 <p>
-                                    Pollo guisado con salsa, verdura , papas , zanahorias , arroz ,
-                                    tortillas y fresco al gusto del cliente
+                                    Panimi con queso y jamon y salsa de tomate.
                                 </p>
                             </div>
                         </div>
@@ -133,17 +126,17 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="~/Content/Img2/cocinillas_162247460_116258364_1706x960.jpg" alt="..." />
+                        <img class="card-img-top" src="~/Content/Img3/post-esevia-comida-cenas-1.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Ensalada</h5>
+                                <h5 class="fw-bolder">Tacos con carne</h5>
                                 <!-- Product reviews-->
                                 <!-- Product price-->
                                 $5.00
                                 <p>
-                                    Ensalada con verduras fresca..
+                                    Tacos con carnes y queso craft y tortilla frita.
                                 </p>
                             </div>
                         </div>
@@ -161,31 +154,7 @@
     <script src="js/scripts.js"></script>
 
     <!-- Modal -->
-  
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModal"><h2>Realizar pedido</h2></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="" method="post">
-                        Nombre del platillo: <input type="text" name="" /><br />
-                        <br />
-                        Ingrese el precio del platillo: <input type="text" name="" /><br />
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                    <button type="button" class="btn btn-primary">Realizar la compra
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
-                            <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
-                        </svg></button>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
 </body>
 </html>
-

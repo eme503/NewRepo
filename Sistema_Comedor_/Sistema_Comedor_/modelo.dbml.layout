@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="modelo">
+  <DataContextMoniker Name="/modeloDataContext" />
+  <nestedChildShapes>
+    <classShape Id="db2b0a8a-4ccc-41b3-98ff-9546b27fa66c" absoluteBounds="4.25, 2.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/modeloDataContext/Almuerzo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0330d7d5-7c33-4f39-815f-e94e280bba99" absoluteBounds="4.265, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2da725c1-a6bf-493d-b432-dc0572558da3" absoluteBounds="0.5, 1.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/modeloDataContext/Cena" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8124fc98-e299-4cd4-befa-c6af1b6fbb09" absoluteBounds="0.515, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c78de19-4bfa-47b8-8da4-3ba209bf71eb" absoluteBounds="1.375, 3.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/modeloDataContext/Desayunos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfeb4a0f-6b3a-4266-ad4d-dd7f4a13068c" absoluteBounds="1.3900000000000001, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48575af8-26a5-4f91-af2a-1d0eef1101d4" absoluteBounds="3, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/modeloDataContext/Personal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3ed4e00-5552-4f3b-a5c6-cdb69536ef04" absoluteBounds="3.015, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -25,6 +25,13 @@ namespace Sistema_Comedor_
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            //Plugins datatables jquery css
+            bundles.Add(new StyleBundle("~/Content/Plugins/css").Include(
+                     "~/Content/datatables/css/jquery.dataTables.css"));
+            //Plugins datatables jquery js
+            bundles.Add(new StyleBundle("~/Content/Plugins/js").Include(
+                     "~/Content/datatables/js/jquery.dataTables.min.js"));
         }
     }
 }

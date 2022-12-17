@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Eliminar_Desayuno";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar Desayuno</h2>
+<style>
+    .Logo {
+        position: relative;
+        left: 10px;
+    }
+
+    h2 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+<div class="Logo">
+    <div class="container">
+        <img src="~/Content/Img/Logo.png" width="190" />
+    </div>
+</div>
+<br />
+<div class="container">
+    <div class="row">
+        <form action="@Url.Action("Eliminar_Desayuno","Operaciones")" method="post">
+            Id: <input type="text" name="Id" class="text-success" />
+            <br />
+            <br />
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form>
+    </div>
+</div>
+
+

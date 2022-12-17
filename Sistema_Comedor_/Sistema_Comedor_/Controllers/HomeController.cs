@@ -17,8 +17,12 @@ namespace Sistema_Comedor_.Controllers
         {
             return View();
         }
-
         public ActionResult Almuerzos()
+        {
+            return View();
+        }
+
+        public ActionResult Cena()
         {
             return View();
         }

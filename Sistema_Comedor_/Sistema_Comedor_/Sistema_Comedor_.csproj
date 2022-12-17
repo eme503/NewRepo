@@ -48,6 +48,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -122,8 +123,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InicioSesionController.cs" />
+    <Compile Include="Controllers\OperacionesController.cs" />
+    <Compile Include="Controllers\OrdenesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="modelo.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelo.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\ViewModelPersonal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,11 +141,17 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datatables\css\jquery.dataTables.css" />
+    <Content Include="Content\datatables\js\jquery.dataTables.min.js" />
     <Content Include="Content\Img2\1605023246_293739_1605199483_media_normal.jpg" />
     <Content Include="Content\Img2\cocinillas_162247460_116258364_1706x960.jpg" />
     <Content Include="Content\Img2\HD-wallpaper-grilled-food-grilled-plate-food-chicken.jpg" />
     <Content Include="Content\Img2\que-carne-escoger.jpg" />
     <Content Include="Content\Img2\Receta-de-lasagna-peruana.jpg" />
+    <Content Include="Content\Img3\cenasrapidas.jpg" />
+    <Content Include="Content\Img3\ideas-para-cenar-quesadillas-de-pollo-scaled.jpg" />
+    <Content Include="Content\Img3\panimi.jpg" />
+    <Content Include="Content\Img3\post-esevia-comida-cenas-1.jpg" />
     <Content Include="Content\Img\5.jpg" />
     <Content Include="Content\Img\chicken-steak-with-lemon-tomato-chili-and-carrot-on-white-plate-1-scaled.jpg" />
     <Content Include="Content\Img\cocinillas_39256075_116186350_1024x576.jpg" />
@@ -153,6 +167,14 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="modelo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>modelo.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="modelo.dbml.layout">
+      <DependentUpon>modelo.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -180,6 +202,19 @@
     <Content Include="Views\Home\Principal.cshtml" />
     <Content Include="Views\Home\Desayunos.cshtml" />
     <Content Include="Views\Home\Almuerzos.cshtml" />
+    <Content Include="Views\Home\Cena.cshtml" />
+    <Content Include="Views\Ordenes\Ordenes_Realizadas_Desayunos.cshtml" />
+    <Content Include="Views\Ordenes\Ordenes_Realizadas_Almuerzo.cshtml" />
+    <Content Include="Views\Ordenes\Ordenes_Realizadas_Cena.cshtml" />
+    <Content Include="Views\Operaciones\Agregar_Desayuno.cshtml" />
+    <Content Include="Views\Operaciones\Actualizar_Desayuno.cshtml" />
+    <Content Include="Views\Operaciones\Eliminar_Desayuno.cshtml" />
+    <Content Include="Views\Operaciones\Agregar_Almuerzo.cshtml" />
+    <Content Include="Views\Operaciones\Actualizar_Almuerzo.cshtml" />
+    <Content Include="Views\Operaciones\Eliminar_Almuerzo.cshtml" />
+    <Content Include="Views\Operaciones\Agregar_Cena.cshtml" />
+    <Content Include="Views\Operaciones\Actualizar_Cena.cshtml" />
+    <Content Include="Views\Operaciones\Eliminar_Cena.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -196,6 +231,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
